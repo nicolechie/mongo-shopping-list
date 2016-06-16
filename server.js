@@ -3,9 +3,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
-var User = function() {
-    this.storage = storage;
-}
+// var User = function() {
+//     this.storage = storage;
+// }
 
 var Storage = function() {
     this.items = [];
@@ -30,8 +30,8 @@ Storage.prototype.delete = function(id) {
 };
 
 Storage.prototype.update = function(id, newName) {
-    this.items[id].name = newName;
-    return this.items;
+   this.items[id].name = newName;
+   return this.items[id];
 };
 
 var app = express();
@@ -62,10 +62,13 @@ app.put('/items/:id', jsonParser, function(req, res) {
     }
     var id = req.params.id;
     var name = req.body.name;
-    console.log(req.body.name);
+    // console.log(req.body.name, id, req.body.id);
     var item = storage.update(id, name);
     res.status(201).json(item);
 });
 
 
-app.listen(process.env.PORT || 8080);
+app.listen(8080);
+exports.app = app;
+exports.storage = storage;
+// app.listen(process.env.PORT || 8080);
