@@ -195,7 +195,7 @@ describe('Shopping List: Delete', function() {
             });
     });
 
-        it('should add an item to the Get', function(done) {
+        it('should delete an item to the Get', function(done) {
         chai.request(app)
             .get('/items')
             .end(function(err, res) {
