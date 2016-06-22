@@ -8,3 +8,10 @@ addons:
     - mongodb-3.2-precise
     packages:
     - mongodb-org-server
+deploy:
+  provider: heroku
+  api_key:
+    secure: K01UJ+3bUCe0huiSgD95g5+O/11MzvrbUkDz3xLMdHMuFNW8WghY+ZPBr4KYmCuCXMf1qUuE9T8kKesXCmyjNfXGmgEfQlOMqEDYNEtcGGX0c4993dAQGbgMw4QUoysDAzaabntoO66ONoXpXSKNXRD+HHDYxxqbseP5U8dVIeAPmv4NTx/9xireVM0EAw44XEjyXeBhEwpcxJSPq+P3c4eBhc/8/Ast+39Og6cJDuCrXQc68KMxh3tyvpnN1zjcoUXvdkjdWEQ5zt4ZwecDGojTltT3hsGMu1madUmUNumelowhNM9/9tQb0rEtjAOKYtloxtXUpYRGdoEU6JvV2qZ0U2SxVA1+L+oGs22Pa5weAXeJgV6ezEFl60DMnZtyHNOl7rFzWHHzXmVVL+WVVYO13XweX1/0r5zYHQwL01feRsU4fvrfAohY9PKgVo+amAr3NNVoI7MspAxupPJ92kKlvb+zeyov6H2VHxzOhqUkXBW69FKRlxznQ0NPbbqB9r/RDi8QwwFRdem7gF9WdLSnGojk2ai7S8CWsBvQ4XW59KoptRqaIEMO4R/YutXFwh3+kUdxQP6kulm4HrbO28aG9rIznxQgR7fo6Bfb84zwzF/eIpsjGmQ8M7NV+5GZDRCNnX8Ga2CltMgOfIytb25pVt6a4cUNpo4vIo/K6MM=
+  app: agile-cove-72114
+  on:
+    repo: nicolechie/shoppinglist
